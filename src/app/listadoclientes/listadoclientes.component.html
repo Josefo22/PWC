@@ -1,0 +1,31 @@
+<div class="container-fluid mt-3 p-4 overflow-auto" id="tablecontainer">
+  <table class="table table-striped text-center" style="border-radius: 0.5rem; overflow: hidden; background-color: #0056b3; color: white;">
+      <thead class="table-dark" style="background-color: #004494;">
+          <tr>
+              <th scope="col">#</th>
+              <th scope="col">Id/Nit</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Tel/Cel</th>
+              <th scope="col">Correo</th>
+              <th scope="col">Operaciones</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let cliente of clientes; let i=index">
+              <th scope="row">{{i + 1}}</th>
+              <td>{{cliente.idCliente}}</td>
+              <td>{{cliente.nombreCliente}}</td>
+              <td>{{cliente.telefonoCliente}}</td>
+              <td>{{cliente.correoCliente}}</td>
+              <td>
+                  <a href="#" class="btn btn-warning btn-sm" [routerLink]="['/editarcliente', i]" routerLinkActive="router-link-active">
+                      Editar
+                  </a> |
+                  <button class="btn btn-danger btn-sm" (click)="Eliminar(i)">
+                      Eliminar
+                  </button>
+              </td>
+          </tr>
+      </tbody>
+  </table>
+</div>

@@ -1,0 +1,29 @@
+<div class="card mx-auto p-3 mt-4 border border-0 shadow-lg" style="width: 25rem; background-color: #0056b3; color: white;">
+  <div class="card-body" style="padding: 1.5rem;">
+      <h4 class="card-title text-center">Nuevo Cliente</h4>
+      <hr class="my-3" style="border-top: 2px solid white;">
+      <form action="#">
+          <div class="mb-3">
+              <label for="idCliente">Ti/Cc:</label>
+              <input type="text" class="form-control" name="idCliente" id="idCliente" [(ngModel)]="idCliente" placeholder="Ingrese TI/CC" style="border-radius: 0.5rem;">
+          </div>
+          <div class="mb-3">
+              <label for="nombreCliente">Nombre Completo:</label>
+              <input type="text" class="form-control" name="nombreCliente" id="nombreCliente" [(ngModel)]="nombreCliente" placeholder="Ingrese Nombre Completo" style="border-radius: 0.5rem;">
+          </div>
+          <div class="mb-3">
+              <label for="telefonoCliente">Tel / Cel:</label>
+              <input type="text" class="form-control" name="telefonoCliente" id="telefonoCliente" [(ngModel)]="telefonoCliente" placeholder="Ingrese Teléfono/Celular" style="border-radius: 0.5rem;">
+          </div>
+          <div class="mb-4">
+              <label for="correoCliente">Correo:</label>
+              <input type="text" class="form-control" name="correoCliente" id="correoCliente" [(ngModel)]="correoCliente" placeholder="Ingrese Correo Electrónico" style="border-radius: 0.5rem;">
+          </div>
+          <div class="d-grid gap-2 mx-auto">
+              <button class="btn btn-light" type="button" (click)="AgregarCliente()" style="border-radius: 0.5rem;">
+                  Agregar <i class="bi bi-person-fill-add"></i>
+              </button>
+          </div>
+      </form>
+  </div>
+</div>
