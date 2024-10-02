@@ -11,6 +11,7 @@ import { NuevoclienteComponent } from './nuevocliente/nuevocliente.component';
 import { ListadoclientesComponent } from './listadoclientes/listadoclientes.component';
 import { EditarclienteComponent } from './editarcliente/editarcliente.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { EditarclienteComponent } from './editarcliente/editarcliente.component'
     PresentacionComponent,
     NuevoclienteComponent,
     ListadoclientesComponent,
-    EditarclienteComponent
+    EditarclienteComponent,
+
   ],
   imports: [
     BrowserModule,
