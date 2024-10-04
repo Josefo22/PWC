@@ -16,9 +16,9 @@ export class EditarclienteComponent {
   nombreCliente:string;
   telefonoCliente:string;
   correoCliente:string;
-  
 
-  constructor(private rutaactiva:ActivatedRoute, 
+
+  constructor(private rutaactiva:ActivatedRoute,
               private clienteservice:ClienteService,
               private router:Router){
   }
@@ -33,7 +33,7 @@ export class EditarclienteComponent {
     this.clientes=this.clienteservice.clientes;
     this.idCliente=this.clientes[id].idCliente;
     this.nombreCliente=this.clientes[id].nombreCliente;
-    this.telefonoCliente=this.clientes[id].telefonoCliente;  
+    this.telefonoCliente=this.clientes[id].telefonoCliente;
     this.correoCliente=this.clientes[id].correoCliente;
   }
 

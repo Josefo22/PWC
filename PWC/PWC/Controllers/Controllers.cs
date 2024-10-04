@@ -6,19 +6,21 @@ using System.Threading.Tasks;
 
 namespace PWC.Controllers
 {
+
+
+  [Route("api/[controller]")]
   [ApiController]
-  [Route("[controller]")]
   public class ClientsController : ControllerBase
   {
     private readonly ApplicationDbContext _context;
-
+   
     public ClientsController(ApplicationDbContext context)
     {
       _context = context;
     }
 
     // Método para crear cliente (POST)
-    [HttpPost]
+    [HttpPost("{id}")]
     public async Task<ActionResult<Client>> CreateClient(Client client)
     {
       if (!ModelState.IsValid)
